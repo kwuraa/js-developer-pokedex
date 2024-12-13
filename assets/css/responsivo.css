@@ -1,0 +1,44 @@
+/* Estilo geral para .pokemons */
+ol.pokemons {
+  display: grid; /* Necessário para usar grid-template-columns */
+  gap: 1rem; /* Espaço entre os itens */
+}
+
+/* Para telas maiores que 1000px */
+@media screen and (min-width: 1000px) {
+  .content {
+    width: 160vh;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+
+  ol.pokemons {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de tamanho igual */
+  }
+
+  .pokemon .numberId {
+    left: 28vh;
+  }
+}
+
+/* Para telas entre 576px e 1000px */
+@media screen and (min-width: 576px) and (max-width: 999px) {
+  ol.pokemons {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+  }
+  .pokemon .numberId {
+    left: 29vh;
+  }
+}
+
+/* Para telas menores que 576px */
+@media screen and (max-width: 575px) {
+  ol.pokemons {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanho igual */
+  }
+
+  .pokemon .numberId {
+    left: 29vh;
+  }
+}
